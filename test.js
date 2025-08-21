@@ -1,19 +1,40 @@
-function longest(words) {
-  if (words.length === 0) return;
-
-  let maxLength = 0;
-
-  for (let word of words) {
-    if (word.length > maxLength) {
-      maxLength = word.length;
-    }
+class Person {
+  // Declare properties
+  constructor(name = 'John Doe', age = 0) {
+      this._name = name;
+      this._age = age;
   }
 
-  for (let word of words) {
-    if (word.length === maxLength) {
-      console.log(word);
-    }
+  // Getters and Setters
+  getName() {
+      return this._name;
+  }
+  
+  setName(name) {
+      this._name = name;
+  }
+
+  getAge() {
+      return this._age;
+  }
+  
+  setAge(age) {
+      this._age = age;
+  }
+
+  // Public Methods
+  addBirthday() {
+      this._age++; 
+  }
+
+  toString() {
+      return `My name is ${this.getName()} and I am ${this.getAge()} years old.`;
   }
 }
-longest([]); 
-module.exports = { longest };
+
+// Example usage:
+const person1 = new Person("Alice", 25);
+console.log(person1.toString()); // Output: My name is Alice and I am 25 years old.
+
+person1.addBirthday();
+console.log(person1.toString()); // Output: My name is Alice and I am 26 years old.
