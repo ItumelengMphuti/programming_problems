@@ -12,14 +12,14 @@ function twoSum(nums, target) {
 let sum = twoSum([2, 7, 11, 15], 9);
 console.log(sum); // [0, 1]
 
-function isPalindrome(x) {
-    let 
-    for(let i = 0; i < x; i++) {
-        if(x[i] !== x[i - 1]) {
-            return false;
-        }
+function isPalindrome (x) {
+    let num = x.toString();
+    for(let i = 0; i < num.length / 2; i++) {
+        if(num[i] !== num[num.length - 1 - i]) {
+            return false
+        } 
     }
-    return true;
-}
+    return true 
+};
  let pali = isPalindrome(221)
  console.log(pali)
