@@ -1,20 +1,20 @@
 // REPEAT!!
-
 function fizzbuzz(n) {
-    const answer = [];
-
-    for(let i = 1; i <= n; i++) {
-        if(i % 3 === 0 && i % 5 === 0) {
-            answer.push("FizzBuzz");
+    let output = [];
+    for (let i = 1; i <= n; i++) {
+        let result = "";
+        if ((i % 3 === 0) && (i % 5 === 0)) {
+            result += "FizzBuzz";
         } else if (i % 3 === 0) {
-            answer.push("Fizz");
+            result += "Fizz";
         } else if (i % 5 === 0) {
-            answer.push("Buzz")
+            result += "Buzz";
         } else {
-            answer.push(i.toString());
+            result = i.toString();
         }
+        output.push(result);
     }
-    return answer;
+return output;
 }
 
-console.log(fizzbuzz(5))
+console.log(fizzbuzz(15))
